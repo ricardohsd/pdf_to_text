@@ -7,13 +7,13 @@ defmodule PdfToText.MixProject do
     [
       app: :pdf_to_text,
       version: @version,
-      elixir: "~> 1.12",
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       package: package(),
       deps: deps(),
       name: "PdfToText",
       description: "Converts PDF files into string",
-      source_url: "https://github.com/remoteoss/pdf_to_text",
+      source_url: "https://github.com/ricardohsd/pdf_to_text",
       docs: [
         main: "PdfToText",
         extras: ["README.md"]
@@ -38,10 +38,10 @@ defmodule PdfToText.MixProject do
         ],
       licenses: ["GNU GPL v2.0"],
       links: %{
-        "GitHub" => "https://github.com/remoteoss/pdf_to_text",
+        "GitHub" => "https://github.com/ricardohsd/pdf_to_text",
         "Docs" => "https://hexdocs.pm/pdf_to_text"
       },
-      source_url: "https://github.com/remoteoss/pdf_to_text"
+      source_url: "https://github.com/ricardohsd/pdf_to_text"
     ]
   end
 
@@ -55,10 +55,10 @@ defmodule PdfToText.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler_precompiled, "~> 0.3"},
-      {:rustler, ">= 0.0.0", optional: true},
+      {:rustler_precompiled, "~> 0.6"},
+      {:rustler, ">= 0.28.0", optional: true},
       {:ex_doc, "~> 0.28", only: [:dev, :test], runtime: false},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
   end
