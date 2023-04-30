@@ -7,8 +7,8 @@ on:
       - main
 
 env:
-  ELIXIR_VERSION: 1.13
-  OTP_VERSION: 24.2
+  ELIXIR_VERSION: 1.14.4
+  OTP_VERSION: 25
   MIX_ENV: test
   PDF_TO_TEXT_BUILD: true
 
