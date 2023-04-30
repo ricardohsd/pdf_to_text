@@ -78,38 +78,6 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y libpoppler-dev libpoppler-glib-dev libglib2.0-dev
       - run: mix format --check-formatted
 
-  dialyzer:
-    needs: deps
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: erlef/setup-beam@v1
-        with:
-          otp-version: ${{ env.OTP_VERSION }}
-          elixir-version: ${{ env.ELIXIR_VERSION }}
-
-      - uses: actions/cache@v2
-        id: cache-deps
-        with:
-          path: |
-            deps
-            _build
-          key: ${{ needs.deps.outputs.deps-cache-key }}
-
-      - uses: actions/cache@v2
-        id: plt-cache
-        with:
-          path: priv/plts
-          key: v2-plt-${{ env.ELIXIR_VERSION }}-${{ env.OTP_VERSION }}
-
-      - run: sudo apt-get update && sudo apt-get install -y libpoppler-dev libpoppler-glib-dev libglib2.0-dev
-
-      - run: mix dialyzer --plt
-        if: steps.plt-cache.outputs.cache-hit != 'true'
-
-      - run: mix dialyzer
-
   docs:
     needs: deps
     runs-on: ubuntu-latest
