@@ -23,7 +23,7 @@ Use Rustup to install Rust:
 ```elixir
 def deps do
   [
-    {:pdf_to_text, git: "https://github.com/remoteoss/pdf_to_text.git"}
+    {:pdf_to_text, git: "https://github.com/ricardohsd/pdf_to_text.git"}
   ]
 end
 ```
