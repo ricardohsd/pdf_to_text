@@ -1,21 +1,22 @@
-defmodule PdfToText.MixProject do
+defmodule ExPdfToText.MixProject do
   use Mix.Project
 
+  @url "https://github.com/ricardohsd/ex_pdf_to_text"
   @version "0.0.1"
 
   def project do
     [
-      app: :pdf_to_text,
+      app: :ex_pdf_to_text,
       version: @version,
-      elixir: "~> 1.12",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       package: package(),
       deps: deps(),
-      name: "PdfToText",
+      name: "ExPdfToText",
       description: "Converts PDF files into string",
-      source_url: "https://github.com/remoteoss/pdf_to_text",
+      source_url: @url,
       docs: [
-        main: "PdfToText",
+        main: "ExPdfToText",
         extras: ["README.md"]
       ]
     ]
@@ -26,11 +27,11 @@ defmodule PdfToText.MixProject do
       # These are the default files included in the package
       files: ~w[
         lib
-        native/pdf_to_text/src
-        native/pdf_to_text/Cargo.*
-        native/pdf_to_text/README.md
-        native/pdf_to_text/.cargo
-        checksum-Elixir.PdfToText.exs
+        native/ex_pdf_to_text/src
+        native/ex_pdf_to_text/Cargo.*
+        native/ex_pdf_to_text/README.md
+        native/ex_pdf_to_text/.cargo
+        checksum-Elixir.ExPdfToText.exs
         .formatter.exs
         mix.exs
         README.md
@@ -38,10 +39,10 @@ defmodule PdfToText.MixProject do
         ],
       licenses: ["GNU GPL v2.0"],
       links: %{
-        "GitHub" => "https://github.com/remoteoss/pdf_to_text",
+        "GitHub" => @url,
         "Docs" => "https://hexdocs.pm/pdf_to_text"
       },
-      source_url: "https://github.com/remoteoss/pdf_to_text"
+      source_url: @url
     ]
   end
 

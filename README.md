@@ -1,4 +1,4 @@
-# PdfToText
+# ExPdfToText
 
 Extracts text from a PDF file. Still just an experiment 🎉
 
@@ -23,7 +23,11 @@ Use Rustup to install Rust:
 ```elixir
 def deps do
   [
-    {:pdf_to_text, git: "https://github.com/remoteoss/pdf_to_text.git"}
+    {:ex_pdf_to_text, git: "https://github.com/ricardohsd/ex_pdf_to_text.git"}
   ]
 end
 ```
+
+### Acknowledgments
+
+This repo is based on https://github.com/remoteoss/pdf_to_text

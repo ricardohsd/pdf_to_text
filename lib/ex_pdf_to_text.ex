@@ -1,6 +1,6 @@
-defmodule PdfToText do
+defmodule ExPdfToText do
   @moduledoc """
-  `PdfToText` gives you the text content of a PDF.
+  `ExPdfToText` gives you the text content of a PDF.
 
   If you have the PDF file content at hand, use `from_content/1`,
   if you have a file, use `from_path/1`.

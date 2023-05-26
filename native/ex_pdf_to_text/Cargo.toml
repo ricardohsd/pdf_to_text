@@ -1,11 +1,11 @@
 [package]
-name = "pdf_to_text"
+name = "ex_pdf_to_text"
 version = "0.0.1"
 authors = []
 edition = "2021"
 
 [lib]
-name = "pdf_to_text"
+name = "ex_pdf_to_text"
 path = "src/lib.rs"
 crate-type = ["cdylib"]
 

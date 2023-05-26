@@ -1,4 +1,4 @@
-# NIF for Elixir.PdfToText
+# NIF for Elixir.ExPdfToText
 
 ## To build the NIF module:
 
@@ -7,8 +7,8 @@
 ## To load the NIF:
 
 ```elixir
-defmodule PdfToText do
-    use Rustler, otp_app: :pdf_to_text, crate: "pdfparser"
+defmodule ExPdfToText do
+    use Rustler, otp_app: :ex_pdf_to_text, crate: "pdfparser"
 
     # When your NIF is loaded, it will override this function.
     def add(_a, _b), do: :erlang.nif_error(:nif_not_loaded)
