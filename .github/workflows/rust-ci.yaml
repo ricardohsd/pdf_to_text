@@ -8,7 +8,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./native/pdf_to_text/
+    working-directory: ./native/ex_pdf_to_text/
 
 jobs:
   lint:

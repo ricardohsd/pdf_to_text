@@ -10,7 +10,7 @@ env:
   ELIXIR_VERSION: 1.13
   OTP_VERSION: 24.2
   MIX_ENV: test
-  PDF_TO_TEXT_BUILD: true
+  RUSTLER_PRECOMPILATION_BUILD: true
 
 jobs:
   deps:

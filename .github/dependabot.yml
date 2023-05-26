@@ -9,7 +9,7 @@ updates:
   reviewers:
   - tessi
 - package-ecosystem: cargo
-  directory: "/native/pdf_to_text"
+  directory: "/native/ex_pdf_to_text"
   schedule:
     interval: daily
     time: "04:00"

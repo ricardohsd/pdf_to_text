@@ -40,7 +40,7 @@ defmodule ExPdfToText.MixProject do
       licenses: ["GNU GPL v2.0"],
       links: %{
         "GitHub" => @url,
-        "Docs" => "https://hexdocs.pm/pdf_to_text"
+        "Docs" => "https://hexdocs.pm/ex_pdf_to_text"
       },
       source_url: @url
     ]
@@ -56,11 +56,20 @@ defmodule ExPdfToText.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler_precompiled, "~> 0.3"},
-      {:rustler, ">= 0.0.0", optional: true},
+      {:rustler_precompiled, "~> 0.6"},
+      {:rustler, "~> 0.27.0", optional: true},
       {:ex_doc, "~> 0.28", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false}
+    ]
+  end
+
+  defp aliases do
+    [
+      fmt: [
+        "format",
+        "cmd cargo fmt --manifest-path native/ex_pdf_to_text/Cargo.toml"
+      ]
     ]
   end
 end
